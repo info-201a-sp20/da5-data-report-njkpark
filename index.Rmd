@@ -22,7 +22,7 @@ agg_summary <- shootings_2018 %>%
   summarize("Total Killed" = sum(num_killed),
             "Total Injured" = sum(num_injured),
             "Fatality Rate" = sum(num_killed) /
-              (sum(num_killed) + sum(num_injured))) 
+              (sum(num_killed) + sum(num_injured)))
 kable(agg_summary)
 ```
 
@@ -78,3 +78,5 @@ ggplot(plot_map) +
 ```
 
 This plot describes what the rate of death (during a shooting event) was in any particular state during 2018. The calculation would be as follows: death/(death + injury) to get the rate. From this plot, Delaware was the only state that had a 100% death rate (where there were 5 deaths and 0 injured). Utah, Massachusetts, and Conneticut had a death rate of 0% (where there were 4 injured in both Utah and Massachusetts, and 8 injured in Conneticut). 
+
+
